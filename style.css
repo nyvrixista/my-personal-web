@@ -1,9 +1,87 @@
+:root{
+    --light-col: #FFFFFF;
+    --dark-col: #ADD8E6;
+    --header-col: #FFFFFF;
+}
+
 img {
     width: 300px;
 }
+
 body {
     text-align: center;
     font-family:'Arial';
-    background: white;
+    background-image: linear-gradient(45deg, blue, purple,);
+    color: var(--dark-col);
+}
+
+header {
+    text-align: right;
+    vertical-align: top;
+    margin: 30px;
+}
+
+footer {
+    text-align: center;
+    border: solid 3px rgb(0, 198, 225);
+    margin: 80px;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+    "a c"
+    "b c";
+    gap: 10px;
+    margin: 30px;
+    background-color:var(--header-col);
+}
+
+.first {
+    grid-area: a;
+    background-color: blue;
     color: black;
+}
+
+.second {
+    grid-area: b;
+    background-color: red;
+    color: black;
+}
+
+.third {
+    grid-area: c;
+    background-color: purple;
+    color: white;
+}
+
+.box {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border: none;
+}
+
+.animated {
+    animation: wobble 1s ease-in-out infinite alternate
+}
+
+@keyframes wobble {
+    0%{transform:rotate(-20deg);}
+    100%{transform:rotate(20deg);}
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.item {
+    background: blue;
+    padding: 20px;
+    color: white;
 }
